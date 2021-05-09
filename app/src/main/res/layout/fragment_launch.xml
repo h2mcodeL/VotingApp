@@ -8,11 +8,43 @@
         android:layout_height="match_parent"
         tools:context="com.example.android.politicalpreparedness.MainActivity">
 
-        <!-- TODO: Add image for home screen logo. -->
+        <!-- TO DO: Add image for home screen logo. done-->
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:scaleType="center"
+            android:src="@drawable/ballot_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- TODO: Add Button to navigate to upcoming elections. -->
 
-        <!-- TODO: Add Button to navigate to representatives. -->
+        <!-- TO DO: Add Button to navigate to upcoming elections. -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/upcomingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/upcoming_elections"
+            android:textColor="@color/textmaincolor"
+            app:layout_constraintBottom_toTopOf="@+id/representativeButton"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <!-- TO DO: Add Button to navigate to representatives. -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/representativeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/find_reps"
+            android:textColor="@color/textmaincolor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="16dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

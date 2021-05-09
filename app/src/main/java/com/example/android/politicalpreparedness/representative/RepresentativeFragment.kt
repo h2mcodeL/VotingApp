@@ -1,17 +1,10 @@
 package com.example.android.politicalpreparedness.representative
 
-import android.content.Context
-import android.location.Geocoder
-import android.location.Location
-import android.os.Bundle
-import android.view.*
-import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
-import com.example.android.politicalpreparedness.network.models.Address
-import java.util.Locale
 
 class DetailFragment : Fragment() {
 
+    /*
     companion object {
         //TODO: Add Constant for Location request
     }
@@ -29,6 +22,7 @@ class DetailFragment : Fragment() {
         //TODO: Populate Representative adapter
 
         //TODO: Establish button listeners for field and location search
+
 
     }
 
@@ -69,4 +63,5 @@ class DetailFragment : Fragment() {
         imm.hideSoftInputFromWindow(view!!.windowToken, 0)
     }
 
+    */
 }

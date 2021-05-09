@@ -4,4 +4,28 @@
 
     <!-- TODO: Add necessary string values -->
 
+    <string name="find_reps">Find Representatives</string>
+
+    <string name="election_name">Elections Name:</string>
+    <string name="election_title">Saved Elections</string>
+    <string name="upcoming_elections">Upcoming Elections</string>
+
+
+
 </resources>
+
+
+<!--
+
+Refer to square moshi for date formatting
+Date.java, Rfc3339DateJsonAdapter for use with moshi.
+https://github.com/square/moshi/blob/master/adapters/src/main/java/com/squareup/moshi/adapters/Rfc3339DateJsonAdapter.java
+
+
+Errors:
+
+Issue with parsing json data from Civics website.
+
+error::: https://duckduckgo.com/?q=kotlin+failure%3A+expected+BEGIN_ARRAY+but+was+BEGIN_OBJECT+as+path+%24&t=osx&ia=web
+solution :-
+-->
