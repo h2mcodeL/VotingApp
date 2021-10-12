@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- TO DO This screen holds the Upcoming Elections screen -->
+    <!-- TO DO: Add node to connect Election ViewModel -->
+    <data>
+        <variable
+            name="electionViewModel"
+            type="com.example.android.politicalpreparedness.election.ElectionsViewModel" />
+    </data>
+
+<!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--        android:id="@+id/refreshLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        tools:context="election.ElectionsFragment">-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.android.politicalpreparedness.MainActivity">
+
+        <!-- TO DO: Add Upcoming Election Recycler and Header -->
+
+<!--       <androidx.constrainlayout.widget.Guideline-->
+<!--           sndroid:id="@+id/guidelineStart"-->
+<!--           android:layout_width="wrap_content"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:orientation="vertical"-->
+<!--           app:layout_constraintGuide_begin="16dp"-->
+<!--           tools:ignore="MissingClass" />-->
+
+        <TextView
+            android:id="@+id/upcomingelectionid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_dims"
+            android:layout_marginLeft="@dimen/main_dims"
+            android:layout_marginBottom="@dimen/main_dims"
+            android:text="@string/upcoming_elections"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Upcoming Elections Title"/>
+
+        <!-- add a recycler view here for this -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upcoming_elections_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/main_dims"
+            android:layout_marginEnd="@dimen/small_dims"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/saved_elections_list"
+            app:layout_constraintEnd_toEndOf="@+id/saved_elections_list"
+            app:layout_constraintStart_toStartOf="@+id/upcomingelectionid"
+            app:layout_constraintTop_toBottomOf="@+id/upcomingelectionid"
+            app:listData="@{electionViewModel.upcomingElections}"
+            tools:listitem="@layout/election_item_view" />
+
+        <TextView
+            android:id="@+id/savedelectionid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/main_dims"
+            android:layout_marginBottom="@dimen/main_dims"
+            android:text="@string/election_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/saved_elections_list"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Saved Elections Title"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/saved_elections_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_dims"
+            android:layout_marginLeft="@dimen/main_dims"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+</layout>
